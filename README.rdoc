@@ -1,3 +1,3 @@
-== Twitter word search ==
+== Twitter word search
 
 Twitter word search.  Enter a twitter handle to see the most used words given the last 1000 tweets.
