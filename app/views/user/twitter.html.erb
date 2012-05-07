@@ -1,0 +1,27 @@
+ID: <%=@twitter_user_info["id"]%> <br/>
+Name: <%=@twitter_user_info["name"]%><br/>
+Screen Name: <%=@twitter_user_info["screen_name"]%><br/>
+Locations: <%=@twitter_user_info["location"]%><br/>
+Description: <%=@twitter_user_info["description"]%><br/>
+
+<div style='padding-top:25px;'>
+<b>Word count for past 1000 tweets.</b>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@twitter_timeline_words.each do |word,count|%>
+      <tr>
+        <td><%= word %></td>
+        <td><%= count %></td>
+     
+      </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

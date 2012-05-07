@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SortMyTwitter</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">Twitter Word Parse</a>
+      <ul class="nav">
+      
+      </ul>
+      <ul class="nav pull-right">
+        
+      </ul>
+    </div>
+  </div>
+</div><body>
+<div class="container" style="padding-top:50px;">
+	<% unless flash[:notice].blank? %>
+	  <div class="alert-message info">
+	    <%= content_tag :div, flash[:notice] %>
+	  </div>
+	<% end %>
+
+	<% unless flash[:error].blank? %>
+	  <div class="alert-message error">
+	    <%= content_tag :div, flash[:error] %>
+	  </div>
+	<% end %>
+
+	<% unless flash[:alert].blank? %>
+	  <div class="alert-message warning">
+	    <%= content_tag :div, flash[:alert] %>
+	  </div>
+	<% end %>
+	
+<%= yield %>
+</div>
+</body>
+</html>

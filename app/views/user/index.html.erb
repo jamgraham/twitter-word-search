@@ -1,0 +1,10 @@
+<%= form_tag("/user/twitter", :method => "get") do %>
+<fieldset>
+    <legend>Enter twitter name to show most used words.</legend>
+<div class="control-group">
+  <%= label_tag(:q, "For User:", :class=>"input-small") %>
+  <%= text_field_tag(:twitter_user_name) %><br/>
+  <%= submit_tag "Go!", :class => 'btn btn-primary'%>
+</div>
+  </fieldset>
+<% end %>
